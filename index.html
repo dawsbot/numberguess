@@ -1,0 +1,23 @@
+<script>
+	// save the answer
+	var answer = Number(Math.floor(Math.random() * 100 + 1));
+
+	//track user guesses
+	var guessCount = 0;
+
+	//until the user guesses correctly
+	while (guess !== answer) {
+	  var guess = Number(prompt("Guess a number between 0 and 100"));
+		guessCount = guessCount + 1;
+	  if (guess != null) {
+	  	if (guess < answer) {
+		  	alert("You guessed " + guess + " - Guess higher ");
+	  	} else if (guess > answer) {
+		  	alert("You guessed " + guess + " - Guess lower ");
+	  	} else {
+	  		alert("Perfect! You guessed it :) It only took you " + guessCount + " tries.");
+	  	}
+	  }
+	}
+	alert('All done');
+</script>
